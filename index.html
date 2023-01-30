@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bookshelf</title>
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bookshelf Apps</h1>
+
+        <!-- tombol modal-->
+        <button id="open-modal-btn" class="add-new-book">Add New Book</button>
+
+        <!-- search -->
+        <div class="search-book">
+            <form id="search">
+                <h3>Find a Book</h3>
+                <input type="text" placeholder="find your book" id="input-search">
+                <button type="submit" class="search">Search</button>
+                <button type="reset" class="reset">Reset</button>
+            </form>
+        </div>
+
+        <!-- list buku yang belum selesai dibaca -->
+        <div class="unread-book">
+            <h3>Not Finished Reading</h3>
+            <div class="list-book" id="books">
+
+            </div>
+        </div>
+
+        <!-- list buku yang selesai dibaca -->
+        <div class="read-book">
+            <h3>Finished Reading</h3>
+            <div class="list-book" id="read-books">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Add New Book</h3>
+            <form id="add-book-form">
+                <label class="label" for="title">Title:</label>
+                <input required type="text" id="title" name="title">
+                <br>
+                <label class="label" for="author">Author:</label>
+                <input required type="text" id="author" name="author">
+                <br>
+                <label class="label" for="shelf">Year:</label>
+                <input required type="number" id="year" name="Year" min="1000-01-01" max="9999-12-31">
+
+                <div class="checkbox">
+                    <label for="isRead">Finished Reading</label>
+                    <input type="checkbox" name="isRead" id="isRead" placeholder="">
+                </div>
+                <br>
+                <button type="submit" class="add-book">Add Book</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- custom dialog -->
+    <div id="custom-dialog">
+        <div class="dialog-content">
+            <p>Book Deleted Successfully</p>
+        </div>
+        <button class="close-btn">Close</button>
+    </div>
+
+    <script type="text/javascript" src="src/js/script.js"></script>
+</body>
+
+</html>
